@@ -32,12 +32,12 @@ Most commands use options consisting of a single character preceded by a dash, e
 Example:
 `$ ls -lt`
 
-Commands **ls** is given two options "*l*" to produce long format output and "*t*" to sort results by file's last modification time.
+Commands **ls** is given two options "l" to produce long format output and "t" to sort results by file's last modification time.
 
 *Common ls options*
 
 |**Option**|**Long Option**|**Description**|
---------------------------------------------
+-----------|---------------|----------------
 | -a | --all | List all filles, even hidden ones |
 | -A | --almost-all | Like the `-a` option above except it doesn't list `.`(current directory and `..`(parent directory |
 | -d | --directory | Lists directory itself not it's content |
