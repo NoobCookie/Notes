@@ -16,21 +16,21 @@ Relative pathname begins in working directory. It requires special notation char
 
 Example of changing the parent directory from `/usr/bin`:
 1. Using absolute pathname:
- `\$ cd /usr`
+ `$ cd /usr`
 2. Using relative pathname:
- `\$ cd ..`
+ `$ cd ..`
 
 Example of changing the working directory from `/usr` to `/usr/bin`:
 1. Using absolute pathname:
- `\$ cd /usr/bin`
+ `$ cd /usr/bin`
 2. Using relative pathname:
- `\$ cd ./bin`
+ `$ cd ./bin`
 3. Not declaring any pathname:
- `\$ cd bin`
+ `$ cd bin`
  If a pathname isn't specyfied, the working directory will be assumed. 
 
 ### *cd* shortcuts
 
 * `cd` - changes the working directory to home directory
 * `cd -` - changes the working directory to previous working directory
-* 'cd ~user\_name` - changes the working directory to home directory of *user\_name* 
+* `cd ~user\_name` - changes the working directory to home directory of *user\_name* 
