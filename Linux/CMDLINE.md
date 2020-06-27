@@ -8,7 +8,7 @@
 ### Copy and Paste
 
 * Copy - *Ctrl+Shift+C* or *Highlight text + Middle Mouse Button*
-* Paste (at cursor positon) - *Ctrl+Shift+V* or *Middle Mouse Button*
+* Paste (at cursor position) - *Ctrl+Shift+V* or *Middle Mouse Button*
 
 ### File system navigation
 
@@ -22,17 +22,17 @@ Unix-like systems have a single file system tree, regardless of how many storage
 
 ##### Options and arguments
 
-Most commands in the terminal are followed by one or more *options* that modify their behavior, and further, by one ore more *arguments* on which the command acts.
+Most commands in the terminal are followed by one or more *options* that modify their behavior, and further, by one or more *arguments* on which the command acts.
 
 Example syntax:
 `command -options arguments`
 
-Most commands use options consisting of a single character preceded by a dash, ex. "-l". Manny commands however, including those from GNU Proect, also support *long options*, which consist of a word preceded by two dashes, ex. "--reverse". Also many commands allow for multiple short options to be commbined together.
+Most commands use options consisting of a single character preceded by a dash, ex. "-l". Manny commands however, including those from GNU Project, also support *long options*, which consist of a word preceded by two dashes, ex. "--reverse". Also many commands allow for multiple short options to be combined together.
 
 Example:
 `$ ls -lt`
 
-Commands **ls** is given two options "l" to produce long format output and "t" to sort results by file's last modification time.
+Command **ls** is given two options "l" to produce long format output and "t" to sort results by file's last modification time.
 
 *Common ls options*
 
@@ -47,6 +47,29 @@ Commands **ls** is given two options "l" to produce long format output and "t" t
 | -r | --reverse | Display results in reveresed (descending) order |
 | -S | | Sort results by files size |
 | -t | | Sort by modification time | 
+
+##### File systems
+
+Filenames in Linux are not required to relfect a file's content, while a filename like "picture.jpg" would normally be expected to contain a JPEG compressed image, it's not required to in Linux. To determine what files contain we use the `file` command:
+
+`file filename`
+
+The `file` command will print a brief description of the file's contents, ex.:
+
+```
+$ file picture.jpg
+picture.jpg: JPEG image data, JFIF standard 1.01
+```
+
+One of the common ideas in Unix-like operating systems is that "*everything is a file*".
+
+To view content of a file we can use `less` command.
+
+`less filename`
+
+It start `less` program which allows to scroll forward and backwards through a text file. Contrary to other programs that allow viewing files content, `less` doesn't load whole file at start, which helps with faster loading bigger files.
+
+
 
 [cd]: ./CD/CD.md
 [ls]: .LS.md
