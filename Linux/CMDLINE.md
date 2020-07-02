@@ -48,5 +48,44 @@ Commands **ls** is given two options "l" to produce long format output and "t" t
 | -S | | Sort results by files size |
 | -t | | Sort by modification time | 
 
-[cd]: ./CD/CD.md
+### Files and directoiries manipulation
+
+The most frequently used Linux commands, used both for manipulating files and directories are:
+
+* `cp` - Copy files and directories
+* `mv` - Move/rename files and directories
+* `mkdir` - Create directories
+* `rm` - Remove files and directories
+* `ln` - Create hard and symbolic links
+
+Example:
+`cp -u *.html destination`
+
+The command above copies all HTML files from one directory to another, but copies only files that don't exist in the destination folder or are newer than the versions in the destination folder.
+
+##### Wildcards
+
+Wildcards are a set of special characters that help user specify groups of filenames. Using them (also known as globbing) allows user to select filenames and directories based on patterns of characters.
+
+*Wildcards*
+Wildcard|Meaning
+--------|-------
+`*`|Matches any characters
+`?`|Matches any single character
+`[characters]`|Matches any character that is a member of the set characters
+`[!characters]`|Matches any character that is not a member of the set characters
+`[[:class:]]`|Matches any character that is a member of the specified class
+
+*Character Classes*
+Character Class|Meaning
+---------------|-------
+`[:alnum:]` or `[a-zA-Z0-9]`|Matches any alphanumeric character
+`[:alpha:]` or `[a-zA-Z]`|Matches any alphabetic character
+`[:digit:]` or `[0-9]`|Matches any numeral
+`[:lower:]` or `[a-z]`|Matches any lowercase letter
+`[:upper:]` or `[A-Z]`|Matches any uppercase letter
+
+
+
+[td]: ./CD/CD.md
 [ls]: .LS.md
