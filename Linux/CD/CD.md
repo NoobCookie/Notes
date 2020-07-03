@@ -33,4 +33,4 @@ Example of changing the working directory from `/usr` to `/usr/bin`:
 
 * `cd` - changes the working directory to home directory
 * `cd -` - changes the working directory to previous working directory
-* `cd ~user\_name` - changes the working directory to home directory of *user\_name* 
+* `cd ~user_name` - changes the working directory to home directory of *user\_name* 
