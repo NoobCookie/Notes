@@ -124,10 +124,10 @@ Wildcards can be used with any command that accepts filenames as arguments and w
 
 
 
-[cd]: ./CD/CD.md
-[ls]: ./LS.md
-[mkdir]: ./File_dir_manipulation/MKDIR.md
-[cp]: ./File_dir_manipulation/CP.md
-[mv]: ./File_dir_manipulation/MV.md
-[rm]: ./File_dir_manipulation/RM.md
-[ln]: ./File_dir_manipulation/LINKS.md
+[cd]: ./CD/cd.md
+[ls]: ./ls.md
+[mkdir]: ./File_dir_manipulation/mkdir.md
+[cp]: ./File_dir_manipulation/cp.md
+[mv]: ./File_dir_manipulation/mv.md
+[rm]: ./File_dir_manipulation/rm.md
+[ln]: ./File_dir_manipulation/links.md
