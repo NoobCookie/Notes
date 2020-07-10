@@ -121,6 +121,87 @@ Pattern|Matches
 
 Wildcards can be used with any command that accepts filenames as arguments and with some graphical file managers.
 
+### Working with Commands
+
+Terminal commands can be divided into four categories:
+* **an executable program** - within this category programs can be *compiled binaries* or programs written in *scripting languages*
+* **a command built into the shell itself** - number of commands supported by bash, internally called *shell builtins*
+* **a shell function** - small scripts incorporated into the enviroment
+* **an allias** - aliases are commands that the user can define himself, built from other commands
+
+##### Indentifing Commands
+
+**type -display a command's type**
+
+The `type` command is a shell builtin that displays what kind of command the shell will execute.
+
+`type [command name]`
+
+where "command" is the name of command we want to examin.
+Examples:
+```
+$ type type
+type is a shell builtin
+$ type ls
+ls is alliased to `ls --color=auto`
+$ type cp
+cp is /bin/cp
+```
+
+**which - display an executable's location**
+
+To determine the exact location of a given executable, we use the `which` command.
+
+```
+$ which ls
+/bin/ls
+```
+
+This command works only on executable programs, if we try to use it on a shell builtin or an alias we either get no response or an error message.
+
+**help - get help for shell builtins**
+
+`help` is a built-in facility in bash avaliable for each of the shell builtins.
+
+**--help - display usage information**
+
+Many executable programs support a `--help` option that displays a description of the command's supported syntax and options.
+
+**man - display a program's manual page**
+
+Manual or man page is a formal piece of documentation provided by most executable programs intended for the command line. `man` is a special paging program used to view them. 
+Format of manual pages varies but generally they contain the following:
+* a title
+* a synopsis of the command's syntax
+* a description of the command's purpose
+* a listing and description of each of the command's options
+On most linux systems `man` uses `less` to display the manual page.
+To view specific section of the manual user can use `man section search_term`, where section is section number user wants to search.
+Example: `$ man 5 passwd`
+
+**apropos - display appropriate commands**
+
+It so possible to search the list of man pages for possible matches based on search term using `apropos` command, e.g.:
+
+```
+$ apropos partioion
+addpart (8)	- simple wrapper around the "add partiion"...
+all-swap (7)	- event signalling that all swap partitions...
+```
+First field in each line is the name of man page and second field is the section. `man -k` is equivalent to `appropos`.
+
+**whatis - display one-line manual page description**
+
+`whatis` displays the name and one-line description of a man page matching a specified keyword:
+
+```
+$ whatis ls
+ls		(1)	- list directory content
+```
+
+**info - display a program's info entry**
+
+`info` is the GNU Project programs alternative to man pages. They are displeyd with a reader program named "info" their pages are hyperlinked.
 
 
 
@@ -130,4 +211,4 @@ Wildcards can be used with any command that accepts filenames as arguments and w
 [cp]: ./File_dir_manipulation/cp.md
 [mv]: ./File_dir_manipulation/mv.md
 [rm]: ./File_dir_manipulation/rm.md
-[ln]: ./File_dir_manipulation/links.md
+[ln]: ./File_dir_manipulation/ln.md
